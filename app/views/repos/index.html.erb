@@ -1,0 +1,7 @@
+<h1>Repositories</h1>
+
+<% @repos.each do |repo| %>
+  <%= repo.name %><br>
+  <%= repo.language %><br>
+  <%= repo.updated_at %>
+<% end %>

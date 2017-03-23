@@ -1,0 +1,6 @@
+<h1>Followers</h1>
+
+<% @followers.each do |follower| %>
+<%= follower.name %><br>
+<%= image_tag follower.image %><br>
+<% end %>
