@@ -1,0 +1,7 @@
+<h1>Starred Repos</h1>
+<%= @starred_repos.count %>
+<% @starred_repos.each do |repo| %>
+<%= repo.name %>
+<%= repo.language %>
+<%= repo.updated_at %>
+<% end %>
