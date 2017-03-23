@@ -1,7 +1,17 @@
-<h1>Starred Repos</h1>
-<%= @starred_repos.count %>
-<% @starred_repos.each do |repo| %>
-<%= repo.name %>
-<%= repo.language %>
-<%= repo.updated_at %>
-<% end %>
+<div class="container-fluid container-home">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <h1 class="home">Starred Repos</h1>
+    <%= image_tag current_user.image, class: "img-circle img-thumbnail home-image" %>
+    <h2 class="home">
+    <% @starred_repos.each do |repo| %>
+    <%= link_to repo.name, repo.html_url %><br>
+    <%= repo.language %><br>
+    <%= repo.updated_at %><br><br><br>
+    <% end %>
+ </h2>
+    <h2 class="home"> <%= current_user.email %> </h2>
+    <%= link_to "Profile", dashboard_path, class: "btn btn-lg btn-default btn-home" %>
+  </div>
+  <div class="col-md-2"></div>
+</div>

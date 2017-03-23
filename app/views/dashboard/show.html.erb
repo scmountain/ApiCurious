@@ -1,10 +1,13 @@
 <div class="container-fluid container-home">
   <div class="col-md-2"></div>
   <div class="col-md-8">
-    <h1 class="home">You Are Authorized</h1>
-    <%= image_tag current_user.image, class: "img-circle img-thumbnail home-image" %>
+    <h1 class="home">Welcome</h1>
     <h2 class="home"> <%= current_user.username %> </h2>
-    <h2 class="home"> <%= current_user.email %> </h2>
+    <%= image_tag current_user.image, class: "img-circle img-thumbnail home-image" %>
+    <h4 class="home"> <%= current_user.email %> </h4>
+    <%= link_to "Repos", repos_path, class: "btn btn-lg btn-default btn-home" %>
+    <%= link_to "Followers", followers_path, class: "btn btn-lg btn-default btn-home" %>
+    <%= link_to "Starred Repos", starred_repos_path, class: "btn btn-lg btn-default btn-home" %>
     <%= link_to "Logout", logout_path, class: "btn btn-lg btn-default btn-home" %>
   </div>
   <div class="col-md-2"></div>
